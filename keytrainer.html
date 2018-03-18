@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/underscore-min.js"></script>
+    <script src="./js/functions.js"></script>
+
+    <script type="text/javascript">
+        $('document').ready(function () {
+            $('#userResponse').focus();
+            next();
+            $('#userResponse').keypress(function (e) {
+                if (isValid(e)) {
+                    next();
+                } else {
+                    showError();
+                }
+                // $('#codes').append("<tr><td>charData('', '" + e.key + "', " + e.which + "),</td></tr>");
+                // $('#userResponse').val("");
+                return false;
+                // if (e.which == 13) {
+                //     var question = $('#question');
+                //     question.html("G");
+                //     question.addClass('error');
+                // }
+            });
+        })
+
+
+    </script>
+    <script src="js/functions.js"></script>
+
+
+</head>
+<body>
+<div id="round">0</div>
+<span id="question"></span>
+<!--<table id="codes">-->
+    <!--<tr><td>a</td><td>b</td></tr>-->
+<!--</table>-->
+<input type="text" id="userResponse" />
+
+</body>
+</html>
